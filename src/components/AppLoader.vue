@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "AppLloader"
+    name: "AppLoader"
 }</script>
 
 <template>
