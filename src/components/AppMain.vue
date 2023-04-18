@@ -39,10 +39,10 @@ export default {
         <div class="container p-4">
 
             <div class="card-container p-4 ">
-                <h6 class="found text-white">TROVATE 39 CARDS</h6>
+                <h6 class="found text-white">Cards trovate {{ store.cards.meta.total_rows }}</h6>
                 <AppLoader v-if="store.loading" />
                 <div class="row row-cols-5 " v-else>
-                    <div class="col mt-2 mb-2 " v-for="element in store.cards">
+                    <div class="col mt-2 mb-2 " v-for="element in store.cards.data">
                         <AppCard :card="element" />
 
                     </div>

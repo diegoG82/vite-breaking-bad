@@ -7,21 +7,23 @@ export default {
     emits: ["filter"],
     data() {
 
+
         return {
             store,
-            typeofarch: ["Alien"]
+            // typeofarch: ["Alien"]
         }
 
-    }
+    },
+
 
 };
 
 </script>
 
 <template>
-    <select class="select-type p-2 m-4"  v-model="store.selectedType" @change="$emit('filter')">
-
-       <option value="Alien">Alien</option>
+    <select class="select-type p-2 m-4" v-model="store.selectedType" @change="$emit('filter')">
+        <option value="">All</option>
+        <option value="Alien">Alien</option>
         <option value="Ally of justice">Ally of Justice</option>
         <option value="Ancient Gear">Ancient Gear</option>
 

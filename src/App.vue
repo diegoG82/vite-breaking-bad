@@ -32,16 +32,19 @@ export default {
   methods: {
     getArchetype() {
       this.store.loading = true;
-      const params = {}
+      const params = {
+        num: 20,
+        offset: 0
+      }
       if (this.store.selectedType) {
-        params.status = this.store.selectedType;
+        params.archetype = this.store.selectedType;
       }
       axios.get(this.store.apiURL, {
-        params:{
-          archetype:"alien"
-        }
+        params
+        
+        
       }).then(resp => {
-        this.store.cards = resp.data.data;
+        this.store.cards = resp.data;
       }).catch(error => {
         console.log(error);
       }).finally(() => {
@@ -50,8 +53,9 @@ export default {
     },
 
     handlefilter() {
-      this.getArchetype();
       console.log("ciao");
+      this.getArchetype();
+      
     }
   },
 }
