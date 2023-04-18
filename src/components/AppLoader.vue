@@ -4,7 +4,7 @@ export default {
 }</script>
 
 <template>
-    <h2>Loading....</h2>
+    <h2 class="loader">Loading....</h2>
 </template>
 
 <style>

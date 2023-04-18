@@ -14,6 +14,7 @@ export default {
         <img :src="card.card_images[0].image_url_small" alt="" srcset="">
         <h4 class="text-white">{{ card.name }}</h4>
         <p>{{ card.archetype }}</p>
+        <!-- <p>{{ card.card_prices[0].ebay_price }}</p> -->
 
     </div>
 </template>
