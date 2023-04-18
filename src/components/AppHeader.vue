@@ -16,7 +16,8 @@ export default {
 .header {
     height: 100px;
     background-color: white;
-    border: 1px solid black;
+    justify-content: center;
+        // border: 1px solid black;
 
     img {
         height: 90px;

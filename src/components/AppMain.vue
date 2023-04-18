@@ -39,10 +39,11 @@ export default {
         <div class="container p-4">
 
             <div class="card-container p-4 ">
-                <h6 class="found text-white">Cards trovate {{ store.cards.meta.total_rows }}</h6>
+                <h6 class="found text-white text-center">Cards trovate {{ store.meta.total_rows }}</h6>
+                <!-- <h6 class="found text-white text-center">Cards trovate {{ store.cards.length }}</h6> -->
                 <AppLoader v-if="store.loading" />
                 <div class="row row-cols-5 " v-else>
-                    <div class="col mt-2 mb-2 " v-for="element in store.cards.data">
+                    <div class="col mt-2 mb-2 " v-for="element in store.cards">
                         <AppCard :card="element" />
 
                     </div>
@@ -58,6 +59,7 @@ export default {
 <style scoped lang="scss">
 main {
     background-color: rgb(212, 143, 56);
+    padding-top: 50px;
 }
 
 .select-type {
@@ -71,14 +73,15 @@ main {
 
     .card-container {
         background-color: white;
+
     }
 
     .found {
         width: 100%;
         height: 80px;
         background-color: black;
-        line-height: 80px
-    }
+        line-height: 80px;
+}
 
 }
 </style>
